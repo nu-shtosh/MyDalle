@@ -39,7 +39,7 @@ enum ImageError: Error {
     case badUrl
 }
 
-class DalleImageGenerate {
+final class DalleImageGenerate {
 
     static let shared: DalleImageGenerate = .init()
 
