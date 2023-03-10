@@ -16,8 +16,7 @@ struct ImageGeneratorView: View {
 
         NavigationView {
 
-            VStack(alignment: .center) {
-
+            VStack {
                 if let image {
                     Image(uiImage: image)
                         .resizable()
@@ -31,14 +30,19 @@ struct ImageGeneratorView: View {
                         .cornerRadius(8)
                         .padding(.vertical, 20)
                         .overlay {
-                            HStack {
+                            VStack {
                                 if isLoading {
                                     ProgressView()
-                                        .padding()
-                                    Text("Loading...")
-                                        .foregroundColor(.white)
+                                    HStack {
+                                        Image("open-ai-logo")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 16, height: 16)
+                                            .foregroundColor(.white)
+                                        Text("Connecting with OpenAI...")
+                                            .foregroundColor(.black)
+                                    }
                                 }
-
                             }
                         }
                 }
@@ -51,13 +55,12 @@ struct ImageGeneratorView: View {
                         .padding()
                     HStack {
                         Spacer()
-                        Button(image == nil ? "Generate" : "Generate New Image", action: generateImage)
+                        Button("Generate", action: generateImage)
                             .buttonStyle(.borderedProminent)
                             .padding()
                     }
+                    Spacer()
                 }
-
-                Spacer()
 
             }
             .navigationTitle("Image Generator")

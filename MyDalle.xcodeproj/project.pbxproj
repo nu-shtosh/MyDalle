@@ -41,6 +41,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B84C447529BB698B003A1ACB /* ImageGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B8CBAD10299BDA2C004CC308 /* ImageGeneratorView.swift */,
+				B84C446C29BA5B66003A1ACB /* DalleImageGenerate.swift */,
+				B84C446E29BA5F74003A1ACB /* ModerationResponse.swift */,
+				B84C447229BA8915003A1ACB /* ImageGenerationResponse.swift */,
+			);
+			path = ImageGenerator;
+			sourceTree = "<group>";
+		};
+		B84C447629BB69AC003A1ACB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B8CBAD0E299BDA2C004CC308 /* MyDalleApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B84C447729BB69BE003A1ACB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B84C447029BA889E003A1ACB /* Secrets.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B8CBAD02299BDA2C004CC308 = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +87,11 @@
 		B8CBAD0D299BDA2C004CC308 /* MyDalle */ = {
 			isa = PBXGroup;
 			children = (
-				B84C447429BA9B70003A1ACB /* Info.plist */,
-				B8CBAD0E299BDA2C004CC308 /* MyDalleApp.swift */,
-				B8CBAD10299BDA2C004CC308 /* ImageGeneratorView.swift */,
-				B84C446C29BA5B66003A1ACB /* DalleImageGenerate.swift */,
-				B84C446E29BA5F74003A1ACB /* ModerationResponse.swift */,
-				B84C447229BA8915003A1ACB /* ImageGenerationResponse.swift */,
-				B84C447029BA889E003A1ACB /* Secrets.swift */,
+				B84C447629BB69AC003A1ACB /* App */,
+				B84C447529BB698B003A1ACB /* ImageGenerator */,
+				B84C447729BB69BE003A1ACB /* Services */,
 				B8CBAD12299BDA2D004CC308 /* Assets.xcassets */,
+				B84C447429BA9B70003A1ACB /* Info.plist */,
 				B8CBAD14299BDA2D004CC308 /* Preview Content */,
 			);
 			path = MyDalle;
