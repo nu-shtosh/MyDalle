@@ -30,3 +30,4 @@ struct ImageGenerationResponse: Codable {
     let created: Int
     let data: [ImageResponse]
 }
+

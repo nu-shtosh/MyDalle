@@ -29,16 +29,6 @@
 
 import SwiftUI
 
-enum URLS: String {
-    case openAIModerations = "https://api.openai.com/v1/moderations"
-    case openAIGenerations = "https://api.openai.com/v1/images/generations"
-}
-
-enum ImageError: Error {
-    case inInvalidPrompt
-    case badUrl
-}
-
 final class DalleImageGenerate {
 
     static let shared: DalleImageGenerate = .init()
@@ -72,8 +62,8 @@ final class DalleImageGenerate {
                                          "n": 1,
                                          "size": "1024x1024",
                                          "user": sessionID]
-
         let data: Data = try JSONSerialization.data(withJSONObject: parameters)
+        
         var urlRequest = URLRequest(url: url)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.addValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")

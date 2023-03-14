@@ -9,8 +9,17 @@
 /* Begin PBXBuildFile section */
 		B84C446D29BA5B66003A1ACB /* DalleImageGenerate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C446C29BA5B66003A1ACB /* DalleImageGenerate.swift */; };
 		B84C446F29BA5F74003A1ACB /* ModerationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C446E29BA5F74003A1ACB /* ModerationResponse.swift */; };
-		B84C447129BA889E003A1ACB /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C447029BA889E003A1ACB /* Secrets.swift */; };
+		B84C447129BA889E003A1ACB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C447029BA889E003A1ACB /* Constants.swift */; };
 		B84C447329BA8915003A1ACB /* ImageGenerationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C447229BA8915003A1ACB /* ImageGenerationResponse.swift */; };
+		B84C447929BB9D2F003A1ACB /* ChatDavinciView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C447829BB9D2F003A1ACB /* ChatDavinciView.swift */; };
+		B84C447D29BBB5FE003A1ACB /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C447C29BBB5FE003A1ACB /* MainTabView.swift */; };
+		B84C447F29BBBD43003A1ACB /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C447E29BBBD43003A1ACB /* ChatMessage.swift */; };
+		B84C448129BBE43C003A1ACB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C448029BBE43C003A1ACB /* Extensions.swift */; };
+		B84C448329BCB556003A1ACB /* ChatDavinciService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C448229BCB556003A1ACB /* ChatDavinciService.swift */; };
+		B84C448529BCB5F2003A1ACB /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C448429BCB5F2003A1ACB /* Secrets.swift */; };
+		B84C448729BCB709003A1ACB /* ChatAICompletions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C448629BCB709003A1ACB /* ChatAICompletions.swift */; };
+		B84C448929BCC3F0003A1ACB /* ChatAICompletionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84C448829BCC3F0003A1ACB /* ChatAICompletionsResponse.swift */; };
+		B84C448C29BCD07F003A1ACB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B84C448B29BCD07F003A1ACB /* Alamofire */; };
 		B8CBAD0F299BDA2C004CC308 /* MyDalleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CBAD0E299BDA2C004CC308 /* MyDalleApp.swift */; };
 		B8CBAD11299BDA2C004CC308 /* ImageGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CBAD10299BDA2C004CC308 /* ImageGeneratorView.swift */; };
 		B8CBAD13299BDA2D004CC308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8CBAD12299BDA2D004CC308 /* Assets.xcassets */; };
@@ -20,9 +29,17 @@
 /* Begin PBXFileReference section */
 		B84C446C29BA5B66003A1ACB /* DalleImageGenerate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DalleImageGenerate.swift; sourceTree = "<group>"; };
 		B84C446E29BA5F74003A1ACB /* ModerationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModerationResponse.swift; sourceTree = "<group>"; };
-		B84C447029BA889E003A1ACB /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		B84C447029BA889E003A1ACB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B84C447229BA8915003A1ACB /* ImageGenerationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerationResponse.swift; sourceTree = "<group>"; };
 		B84C447429BA9B70003A1ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B84C447829BB9D2F003A1ACB /* ChatDavinciView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDavinciView.swift; sourceTree = "<group>"; };
+		B84C447C29BBB5FE003A1ACB /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		B84C447E29BBBD43003A1ACB /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		B84C448029BBE43C003A1ACB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B84C448229BCB556003A1ACB /* ChatDavinciService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDavinciService.swift; sourceTree = "<group>"; };
+		B84C448429BCB5F2003A1ACB /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		B84C448629BCB709003A1ACB /* ChatAICompletions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAICompletions.swift; sourceTree = "<group>"; };
+		B84C448829BCC3F0003A1ACB /* ChatAICompletionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAICompletionsResponse.swift; sourceTree = "<group>"; };
 		B8CBAD0B299BDA2C004CC308 /* MyDalle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDalle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CBAD0E299BDA2C004CC308 /* MyDalleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDalleApp.swift; sourceTree = "<group>"; };
 		B8CBAD10299BDA2C004CC308 /* ImageGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGeneratorView.swift; sourceTree = "<group>"; };
@@ -35,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84C448C29BCD07F003A1ACB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +81,33 @@
 		B84C447729BB69BE003A1ACB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B84C447029BA889E003A1ACB /* Secrets.swift */,
+				B84C447029BA889E003A1ACB /* Constants.swift */,
+				B84C448029BBE43C003A1ACB /* Extensions.swift */,
+				B84C448429BCB5F2003A1ACB /* Secrets.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B84C447A29BB9D36003A1ACB /* ChatDavinci */ = {
+			isa = PBXGroup;
+			children = (
+				B84C447829BB9D2F003A1ACB /* ChatDavinciView.swift */,
+				B84C448229BCB556003A1ACB /* ChatDavinciService.swift */,
+				B84C447E29BBBD43003A1ACB /* ChatMessage.swift */,
+				B84C448629BCB709003A1ACB /* ChatAICompletions.swift */,
+				B84C448829BCC3F0003A1ACB /* ChatAICompletionsResponse.swift */,
+			);
+			path = ChatDavinci;
+			sourceTree = "<group>";
+		};
+		B84C447B29BB9D75003A1ACB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B84C447C29BBB5FE003A1ACB /* MainTabView.swift */,
+				B84C447A29BB9D36003A1ACB /* ChatDavinci */,
+				B84C447529BB698B003A1ACB /* ImageGenerator */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B8CBAD02299BDA2C004CC308 = {
@@ -88,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				B84C447629BB69AC003A1ACB /* App */,
-				B84C447529BB698B003A1ACB /* ImageGenerator */,
+				B84C447B29BB9D75003A1ACB /* Views */,
 				B84C447729BB69BE003A1ACB /* Services */,
 				B8CBAD12299BDA2D004CC308 /* Assets.xcassets */,
 				B84C447429BA9B70003A1ACB /* Info.plist */,
@@ -121,6 +163,9 @@
 			dependencies = (
 			);
 			name = MyDalle;
+			packageProductDependencies = (
+				B84C448B29BCD07F003A1ACB /* Alamofire */,
+			);
 			productName = MyDalle;
 			productReference = B8CBAD0B299BDA2C004CC308 /* MyDalle.app */;
 			productType = "com.apple.product-type.application";
@@ -147,8 +192,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = B8CBAD02299BDA2C004CC308;
+			packageReferences = (
+				B84C448A29BCD07F003A1ACB /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B8CBAD0C299BDA2C004CC308 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -175,12 +224,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84C447F29BBBD43003A1ACB /* ChatMessage.swift in Sources */,
+				B84C448529BCB5F2003A1ACB /* Secrets.swift in Sources */,
 				B84C446F29BA5F74003A1ACB /* ModerationResponse.swift in Sources */,
-				B84C447129BA889E003A1ACB /* Secrets.swift in Sources */,
+				B84C447129BA889E003A1ACB /* Constants.swift in Sources */,
 				B84C446D29BA5B66003A1ACB /* DalleImageGenerate.swift in Sources */,
+				B84C447D29BBB5FE003A1ACB /* MainTabView.swift in Sources */,
+				B84C448329BCB556003A1ACB /* ChatDavinciService.swift in Sources */,
+				B84C448129BBE43C003A1ACB /* Extensions.swift in Sources */,
+				B84C448729BCB709003A1ACB /* ChatAICompletions.swift in Sources */,
 				B8CBAD11299BDA2C004CC308 /* ImageGeneratorView.swift in Sources */,
 				B84C447329BA8915003A1ACB /* ImageGenerationResponse.swift in Sources */,
 				B8CBAD0F299BDA2C004CC308 /* MyDalleApp.swift in Sources */,
+				B84C447929BB9D2F003A1ACB /* ChatDavinciView.swift in Sources */,
+				B84C448929BCC3F0003A1ACB /* ChatAICompletionsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +442,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B84C448A29BCD07F003A1ACB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B84C448B29BCD07F003A1ACB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B84C448A29BCD07F003A1ACB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B8CBAD03299BDA2C004CC308 /* Project object */;
 }
