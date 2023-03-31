@@ -8,5 +8,5 @@
 import Foundation
 
 enum Secrets {
-    static let openAIApiKey = "your api key"
+    static let openAIApiKey = "your token"
 }
