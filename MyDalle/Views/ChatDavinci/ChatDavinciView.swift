@@ -32,18 +32,20 @@ struct ChatDavinciView: View {
                         .padding(10)
                         .background(.blue.opacity(0.1))
                         .font(Font.system(size: 16, weight: .medium, design: .monospaced))
-                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue.opacity(0.8), lineWidth: 1))
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("deepBlue"), lineWidth: 2))
                         .cornerRadius(10)
                     Button(action: sendMessage) {
                         Text("Send")
                             .foregroundColor(.white)
                             .padding(10)
-                            .background(messageText == "" ? .gray.opacity(0.8) : .blue.opacity(0.8))
+                            .background(messageText == "" ? .gray.opacity(0.8) : Color("deepBlue"))
                             .cornerRadius(10)
                             .font(Font.system(size: 16, weight: .medium, design: .serif))
                     }
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("deepBlue"), lineWidth: 0.8))
                     .disabled(messageText == "")
                     .animation(.default, value: messageText == "")
+                    
                 }
             }
             .padding(.bottom)

@@ -18,38 +18,50 @@ struct ImageGeneratorView: View {
     @State private var saveImageAlert = false
     @State private var isImagePresented = false
 
+    @State private var loadingText = ""
+
+    @State private var isZoomed = false
+
+
     var body: some View {
 
         NavigationView {
             ScrollView {
                 VStack {
                     if let image {
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 256, height: 256)
-                            .cornerRadius(10)
+//                        ScrollView(.vertical) {
+//                            ScrollView(.horizontal) {
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+
+//                                    .ignoresSafeArea(.all)
+                                    .cornerRadius(10)
+//                                    .onTapGesture {
+//                                        withAnimation {
+//                                            isZoomed.toggle()
+//                                        }
+//                                    }
+//                            }
+//                        }
                     } else {
                         VStack {
                             Rectangle()
-                                .fill(Color.blue.opacity(0.8))
-                                .frame(width: 256, height: 256)
+                                .fill(Color.clear)
+                                .aspectRatio(contentMode: .fit)
                                 .cornerRadius(8)
                                 .overlay {
                                     VStack {
                                         if isLoading {
                                             ProgressView()
                                                 .progressViewStyle(.circular)
-                                            HStack {
-                                                Image("open-ai-logo")
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 16, height: 16)
-                                                    .foregroundColor(.white)
-                                                Text("Generating Image...")
-                                                    .foregroundColor(.black)
-                                                    .font(Font.system(size: 16, weight: .medium, design: .monospaced))
-                                            }
+                                            Text(loadingText)
+                                                .foregroundColor(Color("deepBlue"))
+                                                .font(Font.system(size: 16, weight: .medium, design: .monospaced))
+                                                .onAppear {
+                                                    self.loadingText = "Generating Image..."
+                                                }
+                                                .animation(Animation.easeInOut(duration: 0.5), value: loadingText)
                                         }
                                     }
                                 }
@@ -59,11 +71,13 @@ struct ImageGeneratorView: View {
                                     .font(Font.system(size: 12, weight: .medium, design: .serif))
                             }
                         }
+
                     }
 
 
+
                     VStack {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: 5) {
                             Text("Formulate your request (for the accuracy of the result, we recommend using English)")
                                 .font(Font.system(size: 16, weight: .medium, design: .serif))
                             HStack {
@@ -74,44 +88,36 @@ struct ImageGeneratorView: View {
                                     .textSelection(.enabled)
                             }
                         }
-                        .padding(10)
+                        .padding(12)
                         .background(.gray.opacity(0.1))
-                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue.opacity(0.8), lineWidth: 1))
+                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("deepBlue"), lineWidth: 2))
                         .cornerRadius(10)
-                        .padding(.vertical)
+                        .padding(.vertical, 5)
 
 
                         TextField("Enter a sample...", text: $prompt, axis: .vertical)
                             .padding(10)
                             .font(Font.system(size: 16, weight: .medium, design: .monospaced))
-                            .padding(.horizontal)
                             .background(.blue.opacity(0.1))
-                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue.opacity(0.8), lineWidth: 1))
+                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("deepBlue"), lineWidth: 2))
                             .cornerRadius(10)
 
                         HStack(spacing: 20) {
-//                            HStack(spacing: 5) {
-//                                Text("Generation Points:")
-//                                    .font(Font.system(size: 16, weight: .medium, design: .serif))
-//                                Text("\(generationPoints)")
-//                                    .foregroundColor(generationPoints > 3 ? .blue.opacity(0.8) : .red.opacity(0.8))
-//                                    .font(Font.system(size: 16, weight: .medium, design: .serif))
-//                            }
                             Button(action: generateImage) {
                                 Text("Generate Image")
                                     .foregroundColor(.white)
                                     .frame(width: 150, height: 30)
                                     .padding(10)
-                                    .background(prompt == "" ? .gray.opacity(0.8) : .blue.opacity(0.8))
+                                    .background(prompt == "" ? .gray.opacity(0.8) : Color("deepBlue"))
                                     .cornerRadius(10)
                                     .font(Font.system(size: 16, weight: .medium, design: .serif))
                             }
                             .disabled(prompt == "")
                             .animation(.default, value: prompt == "")
-                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue.opacity(0.8), lineWidth: 1))
+                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color("deepBlue"), lineWidth: 2))
                             .cornerRadius(10)
                         }
-                        .padding(.vertical)
+                        .padding(.vertical, 5)
                     }
                 }
                 .navigationTitle("Image Generator")
@@ -140,6 +146,7 @@ struct ImageGeneratorView: View {
 
     private func generateImage() {
         print("Generate Image Button Did Tapped.")
+        loadingText = ""
         image = nil
         isLoading = true
         Task {
