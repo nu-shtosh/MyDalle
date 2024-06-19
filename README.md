@@ -1,7 +1,4 @@
 # MyDalle
-App with AI / В разработке
-
-
 
 <div align="left">
 
